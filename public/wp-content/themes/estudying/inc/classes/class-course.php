@@ -5,6 +5,7 @@
 
 class Course{
     protected $id;
+    protected $module;
 
     function __construct($id)
     {
@@ -44,7 +45,12 @@ class Course{
      * Get Course Module
      */
     public function get_module(){
-        return $this->get_course_field('course_module');
+        if(!$this->module){
+            $module_id =  $this->get_course_field('course_module')[0]['id'];
+            $this->module = new Module($module_id);
+        }
+        return $this->module;
+        
     }
 
     /**

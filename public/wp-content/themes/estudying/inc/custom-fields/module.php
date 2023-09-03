@@ -17,6 +17,7 @@ function register_module_custom_fields() {
                 's2' => 'S2',
             ) ),
             Field::make( 'association', 'module_speciality', __( 'Speciality' ) )
+                ->set_required(true)
 				->set_types(
 					array(
 						array(
