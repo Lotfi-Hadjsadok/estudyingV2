@@ -1,0 +1,4 @@
+.cf-radio__list{
+    display: flex;
+    gap: 10px;
+}
