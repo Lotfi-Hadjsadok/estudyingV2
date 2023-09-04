@@ -56,7 +56,7 @@ class Speciality{
      * Get Speciality Carbon Field Data
      */
     private function get_speciality_field($field){
-        return carbon_get_the_post_meta($field);
+        return carbon_get_post_meta($this->id,$field);
     }
   
 }

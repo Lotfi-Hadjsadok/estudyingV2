@@ -11,7 +11,7 @@ function register_module_custom_fields() {
     Container::make( 'post_meta', __( 'Module' ) )
         ->where( 'post_type', '=', 'module' )
 		->add_fields(array(
-            Field::make( 'radio', 'module_semestre', __( 'Module Semester' ) )
+            Field::make( 'radio', 'module_semester', __( 'Module Semester' ) )
             ->set_options( array(
                 's1' => 'S1',
                 's2' => 'S2',

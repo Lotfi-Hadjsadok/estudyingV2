@@ -35,10 +35,17 @@ class Course{
     }
 
     /**
+     * Get Course Slug
+     */
+    public function get_slug(){
+        return get_post_field('post_name', $this->id);
+    }
+
+    /**
      * Get Course Carbon Field Data
      */
     private function get_course_field($field){
-        return carbon_get_the_post_meta($field);
+        return carbon_get_post_meta($this->id,$field);
     }
 
     /**
@@ -50,8 +57,8 @@ class Course{
             $this->module = new Module($module_id);
         }
         return $this->module;
-        
     }
+
 
     /**
      * Get Course Files
