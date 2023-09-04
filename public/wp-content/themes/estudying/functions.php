@@ -55,3 +55,9 @@ require_once ESTUDYING_DIR . 'inc/classes/class-course.php';
 require_once ESTUDYING_DIR . 'inc/classes/class-module.php';
 require_once ESTUDYING_DIR . 'inc/classes/class-speciality.php';
 
+
+// Routs
+require_once ESTUDYING_DIR . 'inc/routing/routing.php';
+require_once ESTUDYING_DIR . 'inc/routing/course.php';
+
+add_action('init',function(){flush_rewrite_rules();});

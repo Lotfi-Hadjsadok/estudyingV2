@@ -1,7 +1,9 @@
 <?php
 get_header();
 
-$speciality = new Speciality(get_the_ID());
-var_dump($speciality->get_modules());
+echo $_GET['module'];
+echo get_query_var('speciality');
+echo '<br />';
+echo get_query_var('semester');
 
 get_footer();

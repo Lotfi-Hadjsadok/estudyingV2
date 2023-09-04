@@ -18,6 +18,7 @@ function register_module_custom_fields() {
             ) ),
             Field::make( 'association', 'module_speciality', __( 'Speciality' ) )
                 ->set_required(true)
+                ->set_max(1)
 				->set_types(
 					array(
 						array(

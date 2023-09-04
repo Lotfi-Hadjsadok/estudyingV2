@@ -19,6 +19,8 @@ function register_course_custom_fields() {
                     'tp' => 'TP',
                 ) ),
 				Field::make( 'association', 'course_module', __( 'Module' ) )
+                ->set_required(true)
+                ->set_max(1)
 				->set_types(
 					array(
 						array(

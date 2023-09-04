@@ -42,6 +42,20 @@ class Module{
     }
 
     /**
+     * Get Module Courses
+     */
+    public  function get_courses(){
+        global $wpdb;
+        $query = $wpdb->get_results("SELECT pm.post_id FROM {$wpdb->prefix}postmeta pm , {$wpdb->prefix}posts p  WHERE pm.post_id = p.ID AND meta_key = '_course_module|||0|value' AND meta_value = 'post:module:$this->id'",ARRAY_A);
+        return array_map(function($module){
+            return $module['post_id'];
+        },$query);
+    }
+
+
+
+
+    /**
      * Get Module Carbon Field Data
      */
     private function get_module_field($field){
